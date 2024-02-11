@@ -12,5 +12,8 @@
 
 // === ( check both value and datatype)
 
-console.log("2"==2);
-console.log("2"===2);
+// console.log("2"==2);
+// console.log("2"===2);
+
+//stack(primitive),Heap (Non-Primitive)
+
