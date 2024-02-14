@@ -8,6 +8,7 @@ const User2={} // not a singleton
  User2.isLoggedIn=false
 // console.log(User2);
 
+
 const regularUser={
     email:"xya@gmail.com",
     fullname:{
