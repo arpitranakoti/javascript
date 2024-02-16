@@ -49,12 +49,51 @@ const users=[
 ]
 
 users[1].email
-console.log(User2)
+// console.log(User2)
 
-console.log(Object.keys(User2));
-console.log(Object.values(User2));
-console.log(Object.entries(User2));
-console.log(Object.entries(User2));
+// console.log(Object.keys(User2));
+// console.log(Object.values(User2));
+// console.log(Object.entries(User2));
+// console.log(Object.entries(User2));
 
-console.log(User2.hasOwnProperty('isLoggedIn'));
-console.log(User2.hasOwnProperty('isLogged'));
+// console.log(User2.hasOwnProperty('isLoggedIn'));
+// console.log(User2.hasOwnProperty('isLogged')); 
+
+
+
+const course={
+    coursename:"js in hindi",
+    price:"999",
+}
+
+// console.log(course.coursename);
+
+const {coursename:canRename}=course
+// console.log(coursename);
+console.log(canRename);
+
+//destructure in react
+// const navbar=({company})=>{
+
+// }
+
+// navbar(company="arpit")
+
+
+/**************Api*********/
+
+// json : this is how api looks like
+
+// {
+//     "name":"Arpit",
+//     "coursename":"js in ",
+//     "price":"free"
+// }
+
+// some time in form of array
+
+[
+    {},
+    {},
+    {}
+]
