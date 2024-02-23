@@ -29,6 +29,8 @@ for(const [key,value] of map)
     // console.log(key,':-',value);
 }
 
+
+// error 
 const myObj={
     Game:'NFS',
     Game2:'gta'
