@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121;color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langName){
+        const li=document.createElement('li')
+        li.innerHTML=`${langName}`
+        //append need to taverse in tree from start 
+        document.querySelector('.language').appendChild(li);
+    }
+    addlanguage("pyton")
+    addlanguage("cpp")
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("java")
+
+    //Edit value
+    const secLang=document.querySelector("li:nth-child(2)")
+// secLang.innerHTML="mojo"
+    //<li></li>
+    const newli =document.createElement('li')
+    //<li>Mojo</li>
+    newli.textContent="Mojo" 
+    //<li>python </li> --> <li>Mojo</li>
+    secLang.replaceWith(newli)
+
+//Edit
+    const secondLang=document.querySelector('li:nth-child(3)')
+    secondLang.outerHTML='<li>C++</li>'
+
+//remove
+    // const lastLang=document.querySelector('li:last-child')
+    // lastLang.remove()
+</script>
+</html>
