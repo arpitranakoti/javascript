@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+
+        // setInterval(function(){
+        //     console.log("arpit",Date.now())
+        // },1000)
+
+
+    // const sayDate=function( SendParameterHere){
+    //         console.log( SendParameterHere,Date.now())
+    //     }
+
+    // const intervalId=setInterval(sayDate,1000,"sending parameter")
+
+/********stopping setInertval***************/
+        // clearInterval(intervalId)
+
+
+
+
+/*performing given task to use above buttons*****/
+
+document.querySelector('#start').addEventListener('click',function()
+{
+    // Starting
+    const Start=function( SendParameterHere){
+              console.log( SendParameterHere,Date.now())
+          };
+
+    const Forstop=setInterval(Start,1000,"sending parameter")
+          //stoping ( inside start)
+                    
+        document.querySelector('#stop').addEventListener('click',function()
+        {
+                clearInterval(Forstop)
+        });
+
+});
+    </script>
+</body>
+</html>
