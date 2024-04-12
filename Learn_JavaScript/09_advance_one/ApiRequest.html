@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color:rgb(49, 46, 46) ;
+        color: white;
+        /* display: flex; */
+    }
+    .frame{
+        height:300px;
+        width:200px;
+        border: 2px solid white;
+    }
+    .photo{
+        height:150px;
+        width:150px;
+        margin:10px ;
+        border: 2px solid white;
+    }
+    .followers
+    {
+        height:50px;
+        width:100px;
+        margin: 10px;
+        border: 2px solid white;
+    }
+</style>    
+</head>
+<body>
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+<div class="frame">
+    <img class='photo' src="">
+</img>
+    <h4 class='followers'></h4>    
+    <button class='btn'>hey</button>
+</div>
+<script>
+    const requestUrl='https://api.github.com/users/arpitranakoti'
+    const xhr= new XMLHttpRequest();
+     xhr.open('GET',requestUrl)
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            // console.log(typeof data); string
+            // parse : string -> json
+            const data=JSON.parse(this.responseText);
+            console.log(typeof data);
+            console.log(data.followers);
+            console.log(data.avatar_url);
+            /* Given task 
+             (not completed*****************/
+            let follower=data.followers;
+            let image=data.avatar_url;
+            
+            console.log(image);
+            
+            // console.log(this.responseText)
+        }
+        document.querySelector('.btn').addEventListener('click',function()
+        {
+    document.querySelector('.photo').setAttribute("src",`${data.avatar_url}`)
+    document.querySelector('h4').innerHTML=`${data.followers}`
+})
+    }
+    
+    xhr.send()
+</script>
+</body>
+</html>
