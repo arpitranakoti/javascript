@@ -1,10 +1,13 @@
 // fetch('http://somthing.com').then(response).catch(error),finally(allways run ) but there are some more promise
 
-/*************************start ***********
-promise is an object */
+/*************************starting ***************
+promise is an object 
+*/
 
-// ya tho hoga ya nahi hoga
-                                        // creation
+// (resolve and reject ) : ya tho hoga ya nahi 
+
+                           // creation
+
             const promiseOne= new Promise(function(resolve,reject){
                 // Do na async task
                 // db calls , cryptography,network
@@ -14,8 +17,11 @@ promise is an object */
                     resolve()
                 },1000)
             })
-                                                    //consumption: .then has relation with resolve
+
+                   //consumption: .then has relation with (resolve)
+
             promiseOne.then(function(){
+                //if resolve then perform this 
                 console.log("promise consume");
             })
 
@@ -65,13 +71,13 @@ promise is an object */
                 // promiseFour.then(function(){}).catch(function(){})
                 promiseFour.then((user)=>{
                     console.log(user);
-                    return user.username // goes to next then called chaining
+                    return user.username // goes to next (.then) which is called chaining
                 }).then(function(chaining)
                 {
-                    console.log(chaining +" |||||jab error=false krainge||||");
+                    console.log(chaining +" |---->jab error=false krainge<-----|");
                 })
                 .catch((error_aaiga)=>{
-                    console.log(error_aaiga+" ||||jab error= true krainge|||||")
+                    console.log(error_aaiga+" |---->jab error= true krainge<-----|")
                 })
                 .finally(()=>console.log("The promise is either resolved or rejected but //*finally will allways run***"))
 
@@ -106,6 +112,7 @@ promise is an object */
                 consumePromiseFive();
 
 /********************** */
+
                 // async function getAllUser(){
                 //    try{
                 //     const response=await fetch('https://jsonplaceholder.typicode.com/users')
