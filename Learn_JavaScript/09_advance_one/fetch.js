@@ -5,8 +5,8 @@ Ans : allway response mai milaiga ku ki usai nahi pta ki error aaya ya result
       error-> tab aaiga ja request hi send nahi kr paiga browser
 */ 
 
-
 /* fetch('url','anything : obj , fuction that need to be send to url') */
+
 fetch('https://api.github.com/users/arpitranakoti')
 .then((response)=>{
     return response.json()

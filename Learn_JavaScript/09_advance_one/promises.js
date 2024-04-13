@@ -143,7 +143,6 @@ promise is an object
 
 /* fetch('url','anything : obj , fuction that need to be send to browser') */
 
- 
 fetch('https://api.github.com/users/arpitranakoti')
 .then((response)=>{
     return response.json()
