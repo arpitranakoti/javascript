@@ -71,7 +71,7 @@ promise is an object
                 // promiseFour.then(function(){}).catch(function(){})
                 promiseFour.then((user)=>{
                     console.log(user);
-                    return user.username // goes to next (.then) which is called chaining
+                    return user.username // goes to next (.then) which is called chaining / thenable boltai hai
                 }).then(function(chaining)
                 {
                     console.log(chaining +" |---->jab error=false krainge<-----|");
@@ -98,7 +98,17 @@ promise is an object
                     }, 1000);
                 })
 //similar to .then 
+// async await cannot directly handle error 
                 async function consumePromiseFive(){
+                    /*if not error = false  
+                    can run like this directly 
+                    
+                    const response=await promiseFive
+                    console.log(response)
+                    */
+                   /*
+                    but if error= true then use try catch
+                     */
                    try
                    {
                     const response=await promiseFive
@@ -115,6 +125,8 @@ promise is an object
 
                 // async function getAllUser(){
                 //    try{
+                // //fetch network req take time so ,await 
+
                 //     const response=await fetch('https://jsonplaceholder.typicode.com/users')
                 //     // console.log(response);
 
@@ -130,6 +142,20 @@ promise is an object
                 // getAllUser()
 
         // same thing using .then 
+            fetch('https://api.github.com/users/arpitranakoti')
+            .then((response)=>{
+                return response.json()//return hua tho next .then mai jaiga
+            })
+            .then((data)=>{console.log(data)})
+            .catch((error)=>console.log(error))
+
+                    fetch('https://api.github.com/users/arpitranakoti')
+                    .then((response)=>{
+                        return response.json()
+                    })
+                    .then((data)=>{console.log(data)})
+                    .catch((error)=>console.log(error))
+
 
 
  /*******************important question *****/
