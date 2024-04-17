@@ -51,8 +51,8 @@ hyperlink--------->[click](https://github.com/arpitranakoti/javascript/blob/main
 
 
 # TASK LIST ( -[x indicate done] text)
- - [] work1
- - [] work2
+ - [ ] work1
+ - [Y] work2
  - [X] work3
 
 
