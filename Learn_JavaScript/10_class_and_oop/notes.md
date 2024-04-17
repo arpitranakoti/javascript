@@ -18,7 +18,7 @@ Object literal
 - Instances (new ,this)
 
 ## 4 pillars
-Abstraction (fetch('url','obj'))
-Encapsulation (wrapping up of data )
-Inheritance 
-Polymorphism 
+-Abstraction (fetch('url','obj'))
+-Encapsulation (wrapping up of data )
+-Inheritance 
+-Polymorphism 
