@@ -29,25 +29,26 @@ Object literal
 
 
 
- _itallic_
- **Bold**
-~~Strikethrough~~
-# heading1
-## heading2 
-### heading3 till 6
+ _itallic(_ _)_
+ **Bold (** **)**
+~~Strikethrough(~~ ~~)~~
+# heading ( #, ## ,### ... 6*#)
 
-# hyperlink
-* [Name](url "Name")
+
+# hyperlink ( styntax: [Name](url "Name"))
 hyperlink--------->[click](https://github.com/arpitranakoti/javascript/blob/main/Learn_JavaScript/10_class_and_oop/notes.md  "Arpit")
 
 #  for_image_File 
--  ! [nameOfImg] (src_of_img)
+- syntax: ![nameOfImg] (src_of_img)
 
-# lines 
+# lines
+* (***)
 ***
- ## double thick line
+ ## double thick line (--- \n ---)
  ---
  ---
- # some other 
- =
- ================
+ ## (*** \n ***)
+ ***
+ ***
+ =====================================
+ 
