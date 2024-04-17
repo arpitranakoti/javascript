@@ -42,17 +42,17 @@ hyperlink--------->[click](https://github.com/arpitranakoti/javascript/blob/main
 - syntax: ![nameOfImg] (src_of_img)
 
 # list  ( *)
-1.sub_list
+1. sub_list
     * sub1
     * sub2
-2.unordered
+2. unordered
 * unordered1
 * unordered2
 
 
-# TASK LIST ( -[status] text)
- - [done] work1
- - [pending] work2
+# TASK LIST ( -[x indicate done] text)
+ - [] work1
+ - [] work2
  - [X] work3
 
 
