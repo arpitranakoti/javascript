@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function parent()
+    //  {
+    //     let name = "Mozilla"; 
+    //     function child() 
+    //     {
+    //       let s="chhild1"
+    //         console.log(name);
+    //     }
+    //     function child2() 
+    //     {
+    //         console.log(name);
+    //         console.log(s); // cannot access brother properties
+    //     }
+
+    //     child();
+    //     child2();
+    // }
+    // parent();
+
+/*************************************** lexical scoping ***************************/
+
+    // function outer(){
+    //     let username="Arpit"
+    //     function inner() // inner function can access outer 
+    //     {
+    //         let secret="xyz123"
+    //         console.log("inner ",username)//can acess username
+
+    //     }
+    //     function inner2(){
+    //         console.log("inner2 :",username);
+    //         console.log("inner2Secret :",secret); // can not take brother properties but can access parent properties
+    //     }
+    //     inner();
+    //     inner2();
+    // }
+    // outer();
+    // console.log("outermost: ",username)//outer cannot access inner username
+
+
+    /**************************  Closure *******************************************/
+
+    function makeFunc() 
+    {
+        const name = "Mozilla";
+        function displayName() 
+        {
+            console.log(name); // can acess parent name 
+        }
+        return displayName; // return func disName as well as outer func (if exist) lexical_scope makefunc also 
+        // pura function return , sirf func hi nahi uska pura lexical scope return hota hai 
+    }
+
+
+
+    const myFunc = makeFunc();
+    myFunc(); 
+
+</script>
+<script>
+/******************************Example of closure*************************/
+        // document.querySelector("#orange").onclick=function(){
+        //     document.body.style.backgroundColor="orange";
+        // }
+        // document.getElementById("green").onclick=function(){
+        //     document.body.style.backgroundColor="green";
+        // }
+        
+        /******* if to be done on 500 btn ***************/
+
+    function clickHandler(color){
+            // document.body.style.backgroundColor=`${color}`;
+
+            return function(){
+                // can access parent color due to lexical scoping
+                document.body.style.backgroundColor=`${color}`;
+
+            }
+
+    }
+    document.getElementById('orange').onclick=clickHandler("orange")
+    document.getElementById('green').onclick=clickHandler("green")
+
+</script>
+</html>
